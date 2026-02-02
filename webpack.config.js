@@ -9,33 +9,9 @@ module.exports = {
     libraryTarget: 'amd',
     publicPath: '/',
   },
-  externals: [
-    'lodash',
-    'react',
-    'react-dom',
-    '@grafana/data',
-    '@grafana/ui',
-    '@grafana/runtime',
-    function ({ request }, callback) {
-      const prefix = 'grafana/';
-      if (request && request.startsWith(prefix)) {
-        return callback(null, request.slice(prefix.length));
-      }
-      callback();
-    },
-  ],
+  externals: ['lodash', 'react', 'react-dom', '@grafana/data', '@grafana/ui', '@grafana/runtime'],
   module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-      },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
-    ],
+    rules: [{ test: /\.tsx?$/, use: 'ts-loader', exclude: /node_modules/ }],
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
@@ -46,7 +22,6 @@ module.exports = {
         { from: 'src/plugin.json', to: '.' },
         { from: 'src/img', to: 'img', noErrorOnMissing: true },
         { from: 'README.md', to: '.', noErrorOnMissing: true },
-        { from: 'CHANGELOG.md', to: '.', noErrorOnMissing: true },
         { from: 'LICENSE', to: '.', noErrorOnMissing: true },
       ],
     }),

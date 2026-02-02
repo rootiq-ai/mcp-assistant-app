@@ -1,69 +1,32 @@
 {
   "type": "app",
-  "name": "MCP Assistant",
-  "id": "mcp-assistant-app",
+  "name": "AI Assistant",
+  "id": "kmluvce-aiassistant-app",
   "preload": true,
   "info": {
-    "description": "Universal AI chatbot sidebar for Grafana that connects to any MCP (Model Context Protocol) server. Features real-time SSE streaming, inline charts, and a beautiful dark theme.",
+    "description": "Universal AI chatbot sidebar for Grafana with real-time SSE streaming.",
     "author": {
       "name": "Kamal Singh Bisht",
-      "url": "https://github.com/kamalsinghbisht"
+      "url": "https://github.com/rootiq-ai"
     },
-    "keywords": [
-      "mcp",
-      "model-context-protocol",
-      "chatbot",
-      "ai",
-      "assistant",
-      "llm",
-      "observability",
-      "sse",
-      "streaming",
-      "sidebar"
-    ],
+    "keywords": ["ai", "assistant", "chatbot", "mcp", "llm", "sse", "streaming"],
     "logos": {
       "small": "img/logo.svg",
       "large": "img/logo.svg"
     },
     "links": [
-      {
-        "name": "GitHub",
-        "url": "https://github.com/kamalsinghbisht/mcp-assistant-app"
-      },
-      {
-        "name": "Documentation",
-        "url": "https://github.com/kamalsinghbisht/mcp-assistant-app#readme"
-      },
-      {
-        "name": "Report Issues",
-        "url": "https://github.com/kamalsinghbisht/mcp-assistant-app/issues"
-      }
-    ],
-    "screenshots": [
-      {
-        "name": "Sidebar Chat",
-        "path": "img/screenshot-sidebar.png"
-      },
-      {
-        "name": "SSE Streaming",
-        "path": "img/screenshot-streaming.png"
-      },
-      {
-        "name": "Settings",
-        "path": "img/screenshot-settings.png"
-      }
+      {"name": "GitHub", "url": "https://github.com/rootiq-ai/ai-assistant-app"}
     ],
     "version": "1.0.0",
-    "updated": "2025-02-01"
+    "updated": "2025-02-02"
   },
   "includes": [
     {
       "type": "page",
       "name": "Configuration",
-      "path": "/a/mcp-assistant-app",
+      "path": "/a/kmluvce-aiassistant-app",
       "role": "Viewer",
-      "addToNav": true,
-      "defaultNav": false
+      "addToNav": true
     }
   ],
   "dependencies": {
