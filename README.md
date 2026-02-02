@@ -31,40 +31,46 @@ grafana-cli plugins install mcp-assistant-app
 
 1. **Download** the latest release from [GitHub Releases](https://github.com/kamalsinghbisht/mcp-assistant-app/releases)
 
-2. **Extract** to your Grafana plugins directory:
+2. **Clone** to your Grafana plugins directory:
    ```bash
-   unzip mcp-assistant-app-1.0.0.zip -d /var/lib/grafana/plugins/
+   git clone https://github.com/rootiq-ai/mcp-assistant-app.git
+   cd mcp-assistant-app
    ```
-
-3. **Configure** Grafana to allow unsigned plugins (for development):
+3. **Build the Plugin**
+   ```bash
+   npm install
+   npm run build
+   ```
+4. **Copy to Grafana Plugins Folder**
+   ```bash
+   sudo cp -r dist /var/lib/grafana/plugins/mcp-assistant-app
+   sudo chown -R grafana:grafana /var/lib/grafana/plugins/mcp-assistant-app
+   ```
+6. **Configure** Grafana to allow unsigned plugins (for development):
    ```ini
    # /etc/grafana/grafana.ini
    [plugins]
    allow_loading_unsigned_plugins = mcp-assistant-app
    ```
-
-4. **Restart** Grafana:
+7. **Restart** Grafana:
    ```bash
    sudo systemctl restart grafana-server
    ```
-
-5. **Enable** the plugin:
-   - Go to **Configuration** → **Plugins**
-   - Search for "MCP Assistant"
-   - Click **Enable**
-
+8. **Enable** the plugin:
+   - Open http://localhost:3000/plugins
+   - Search "MCP Assistant"
+   - Click on it → Enable
+9. **Verify**
+    - Hard refresh browser: Ctrl + Shift +
+    - You should see the 🤖 blue button (bottom-right corner) in dashboard
+    - Click it to open the sidebar!
 ## Quick Start
 
 1. **Start your MCP server**:
-   ```bash
-   # Example with GenAI MCP Server
-   cd genai-mcp-server
-   uv run genai-mcp-http-advanced
-   ```
 
 2. **Open Grafana** and click the **🤖 blue button** in the bottom-right corner
 
-3. **Configure** the MCP server URL in settings (default: `http://localhost:3001`)
+3. **Configure** the MCP server URL in settings (default: `https://localhost:3001`)
 
 4. **Ask questions** in natural language!
 
