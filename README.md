@@ -29,11 +29,11 @@ grafana-cli plugins install mcp-assistant-app
 
 ### Manual Installation
 
-1. **Download** the latest release from [GitHub Releases](https://github.com/kamalsinghbisht/mcp-assistant-app/releases)
+1. **Download** the latest release from [GitHub Releases](https://github.com/rootiq-ai/ai-assistant-app/releases)
 
 2. **Clone** to your Grafana plugins directory:
    ```bash
-   git clone https://github.com/rootiq-ai/mcp-assistant-app.git
+   git clone https://github.com/rootiq-ai/ai-assistant-app.git
    cd mcp-assistant-app
    ```
 3. **Build the Plugin**
@@ -43,14 +43,14 @@ grafana-cli plugins install mcp-assistant-app
    ```
 4. **Copy to Grafana Plugins Folder**
    ```bash
-   sudo cp -r dist /var/lib/grafana/plugins/mcp-assistant-app
-   sudo chown -R grafana:grafana /var/lib/grafana/plugins/mcp-assistant-app
+   sudo cp -r dist /var/lib/grafana/plugins/ai-assistant-app
+   sudo chown -R grafana:grafana /var/lib/grafana/plugins/ai-assistant-app
    ```
 6. **Configure** Grafana to allow unsigned plugins (for development):
    ```ini
    # /etc/grafana/grafana.ini
    [plugins]
-   allow_loading_unsigned_plugins = mcp-assistant-app
+   allow_loading_unsigned_plugins = ai-assistant-app
    ```
 7. **Restart** Grafana:
    ```bash
@@ -58,7 +58,7 @@ grafana-cli plugins install mcp-assistant-app
    ```
 8. **Enable** the plugin:
    - Open http://localhost:3000/plugins
-   - Search "MCP Assistant"
+   - Search "AI Assistant"
    - Click on it → Enable
 9. **Verify**
     - Hard refresh browser: Ctrl + Shift +
