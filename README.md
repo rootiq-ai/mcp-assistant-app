@@ -1,4 +1,4 @@
-# MCP Assistant - Grafana Plugin
+# AI Assistant - Grafana Plugin
 
 [![Grafana](https://img.shields.io/badge/Grafana-9.0+-orange?logo=grafana)](https://grafana.com)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
